@@ -6,9 +6,11 @@ from twilio.rest import Client
 app = Flask(__name__)
 
 # Weather API key from OpenWeatherMap
+# you need your own API key for this to work
 weatherApiKey = "aa76cf70a8f2c043cc058f454835cfbc"
 
 # Twilio account SID and auth token
+# you need your own SID and token for this to work
 twilioSid = "AC98fa068e2ee20d8966ea3ab8fdc98d9c"
 twilioToken = "f885d36094430fd1b357a326a96a3b45"
 
