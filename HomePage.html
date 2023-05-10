@@ -1,0 +1,31 @@
+<!-- Make sure to create and put this into a folder called "templates" -->
+<!-- The folder needs to be in the same directory as the python code for Flask to read the html and create the site -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Final Project</title>
+</head>
+<body>
+	<h1>This is my weather app</h1>
+	<ul>
+		<li>Name: Jeremiah Garcia</li>
+		<li>Class: Python Programming 3320*01</li>
+		<li>Professor: Robert Domanski</li>
+	</ul>
+
+	<h2>Get the Weather for Your Zip Code</h2>
+	<form method="POST" action="/">
+		<label for="zipCode">Zip Code:</label>
+		<input type="text" id="zipCode" name="zipCode">
+		<input type="submit" value="Get Weather">
+	</form>
+
+	{% if weather_data %}
+		<h3>Weather Data:</h3>
+		<p>Temperature: {{ weather_data['temperature'][0] }}°F</p>
+		<p>Humidity: {{ weather_data['humidity'][0] }}%</p>
+		<p>Wind Speed: {{ weather_data['wind_speed'][0] }} mph</p>
+		<p>Rain Chance: {{ weather_data['rain_chance'][0] }}%</p>
+	{% endif %}
+</body>
+</html>
